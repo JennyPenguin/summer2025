@@ -49,4 +49,9 @@ main() {
   final name6 = 'Bob';
   final String nickname6 = 'Bobby';
   print(nickname6);
+
+  // will cause error bc can't reassign final
+  // name6 = "hi";
+
+  const 
 }
