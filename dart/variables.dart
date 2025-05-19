@@ -53,5 +53,41 @@ main() {
   // will cause error bc can't reassign final
   // name6 = "hi";
 
-  const 
+  // compile-time constants, final is done at runtime
+  // const is immutable, final can have field changes
+  const int time = 1;
+  print(time);
+
+  // const values, can use const to declare constructors
+  var foo = const [];
+  // const [] and [] is equivalent
+  final bar = const [];
+  foo = [1, 2, 3];
+
+  const Object i = 3;
+
+  // typecsat
+  const list = [i as int];
+  // collection if
+  const map = {if (i is int) i: 'int'};
+  // spread
+  const set = {if (list is List<int>) ...list};
+  // fields of a final object can be changed
+
+  // wild card
+  var _ = 1;
+
+  for (var _ in list) {}
+
+  try {
+    throw "!";
+  } catch (_) {
+    print('oops');
+  }
 }
+
+// generic type and function type parameters
+class T<_> {}
+
+void genericFunction<_>() {}
+// takeGenericCallback(<_>() => true);
