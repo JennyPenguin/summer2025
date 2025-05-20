@@ -69,9 +69,9 @@ main() {
   // typecsat
   const list = [i as int];
   // collection if
-  const map = {if (i is int) i: 'int'};
+  const map = {i: 'int'};
   // spread
-  const set = {if (list is List<int>) ...list};
+  const set = {...list};
   // fields of a final object can be changed
 
   // wild card
